@@ -32,20 +32,18 @@ public class CommonClass {
         }
 
         BlockState state = world.getBlockState(pos);
+        boolean isShovelPath = state.is(Blocks.DIRT_PATH) && player.getItemInHand(hand).is(ItemTags.SHOVELS);
+        boolean isHoeFarmland = state.is(Blocks.FARMLAND) && player.getItemInHand(hand).is(ItemTags.HOES);
 
-        if (state.is(Blocks.DIRT_PATH) && player.getItemInHand(hand).is(ItemTags.SHOVELS)) {
-            player.setPos(player.getX(), player.getY() + 0.0625, player.getZ());
+        if (isShovelPath || isHoeFarmland) {
             world.setBlock(pos, Blocks.DIRT.defaultBlockState(), 1);
-            player.getItemInHand(hand).hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
-            world.playSound(null, pos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS);
-            return InteractionResult.SUCCESS;
-        }
 
-        if (state.is(Blocks.FARMLAND) && player.getItemInHand(hand).is(ItemTags.HOES)) {
-            player.setPos(player.getX(), player.getY() + 0.0625, player.getZ());
-            world.setBlock(pos, Blocks.DIRT.defaultBlockState(), 1);
+            if ((int) player.getX() == pos.getX() && (int) player.getZ() == pos.getZ() && (int) player.getY() == pos.getY()) {
+                player.setPos(player.getX(), pos.getY() + 1, player.getZ());
+            }
+
             player.getItemInHand(hand).hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
-            world.playSound(null, pos, SoundEvents.HOE_TILL, SoundSource.BLOCKS);
+            world.playSound(null, pos, isShovelPath ? SoundEvents.SHOVEL_FLATTEN : isHoeFarmland ? SoundEvents.HOE_TILL : SoundEvents.EMPTY, SoundSource.BLOCKS);
             return InteractionResult.SUCCESS;
         }
 
