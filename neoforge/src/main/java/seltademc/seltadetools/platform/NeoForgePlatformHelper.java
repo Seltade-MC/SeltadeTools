@@ -1,8 +1,8 @@
-package seltademc.seltaderoads.platform;
+package seltademc.seltadetools.platform;
 
-import seltademc.seltaderoads.platform.services.IPlatformHelper;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
+import seltademc.seltadetools.platform.services.IPlatformHelper;
 
 public class NeoForgePlatformHelper implements IPlatformHelper {
 

@@ -1,4 +1,4 @@
-package seltademc.seltaderoads;
+package seltademc.seltadetools;
 
 import net.minecraft.world.InteractionResult;
 import net.minecraftforge.common.MinecraftForge;
@@ -6,9 +6,9 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod(Constants.MOD_ID)
-public class SeltadeRoads {
+public class SeltadeTools {
 
-    public SeltadeRoads() {
+    public SeltadeTools() {
         Constants.LOG.info("Hello Forge world!");
         CommonClass.init();
 

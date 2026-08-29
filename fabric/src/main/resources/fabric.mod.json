@@ -16,7 +16,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "seltademc.seltaderoads.SeltadeRoads"
+            "seltademc.seltadetools.SeltadeTools"
         ]
     },
     "depends": {

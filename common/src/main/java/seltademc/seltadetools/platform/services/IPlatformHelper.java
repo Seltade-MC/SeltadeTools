@@ -1,4 +1,4 @@
-package seltademc.seltaderoads.platform.services;
+package seltademc.seltadetools.platform.services;
 
 public interface IPlatformHelper {
 

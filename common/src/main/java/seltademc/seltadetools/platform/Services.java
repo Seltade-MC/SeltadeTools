@@ -1,9 +1,9 @@
-package seltademc.seltaderoads.platform;
-
-import seltademc.seltaderoads.Constants;
-import seltademc.seltaderoads.platform.services.IPlatformHelper;
+package seltademc.seltadetools.platform;
 
 import java.util.ServiceLoader;
+
+import seltademc.seltadetools.Constants;
+import seltademc.seltadetools.platform.services.IPlatformHelper;
 
 // Service loaders are a built-in Java feature that allow us to locate implementations of an interface that vary from one
 // environment to another. In the context of MultiLoader we use this feature to access a mock API in the common code that

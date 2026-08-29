@@ -1,8 +1,8 @@
-package seltademc.seltaderoads.platform;
+package seltademc.seltadetools.platform;
 
-import seltademc.seltaderoads.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
+import seltademc.seltadetools.platform.services.IPlatformHelper;
 
 public class ForgePlatformHelper implements IPlatformHelper {
 

@@ -1,4 +1,4 @@
-package seltademc.seltaderoads;
+package seltademc.seltadetools;
 
 import net.minecraft.world.InteractionResult;
 import net.neoforged.bus.api.IEventBus;
@@ -7,9 +7,9 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 @Mod(Constants.MOD_ID)
-public class SeltadeRoads {
+public class SeltadeTools {
 
-    public SeltadeRoads(IEventBus eventBus) {
+    public SeltadeTools(IEventBus eventBus) {
         Constants.LOG.info("Hello NeoForge world!");
         CommonClass.init();
 

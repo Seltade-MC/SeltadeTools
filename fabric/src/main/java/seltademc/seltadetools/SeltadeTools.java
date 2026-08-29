@@ -1,10 +1,10 @@
-package seltademc.seltaderoads;
+package seltademc.seltadetools;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.world.InteractionResult;
 
-public class SeltadeRoads implements ModInitializer {
+public class SeltadeTools implements ModInitializer {
     
     @Override
     public void onInitialize() {
