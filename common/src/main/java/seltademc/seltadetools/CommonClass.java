@@ -34,7 +34,7 @@ public class CommonClass {
         BlockState state = world.getBlockState(pos);
 
         if (state.is(Blocks.DIRT_PATH) && player.getItemInHand(hand).is(ItemTags.SHOVELS)) {
-            player.moveTo(player.getX(), player.getY() + 0.1, player.getZ());
+            player.setPos(player.getX(), player.getY() + 0.0625, player.getZ());
             world.setBlock(pos, Blocks.DIRT.defaultBlockState(), 1);
             player.getItemInHand(hand).hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
             world.playSound(null, pos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS);
@@ -42,7 +42,7 @@ public class CommonClass {
         }
 
         if (state.is(Blocks.FARMLAND) && player.getItemInHand(hand).is(ItemTags.HOES)) {
-            player.moveTo(player.getX(), player.getY() + 0.1, player.getZ());
+            player.setPos(player.getX(), player.getY() + 0.0625, player.getZ());
             world.setBlock(pos, Blocks.DIRT.defaultBlockState(), 1);
             player.getItemInHand(hand).hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
             world.playSound(null, pos, SoundEvents.HOE_TILL, SoundSource.BLOCKS);
