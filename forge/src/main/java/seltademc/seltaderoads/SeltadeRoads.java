@@ -1,19 +1,34 @@
 package seltademc.seltaderoads;
 
+import net.minecraft.world.InteractionResult;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod(Constants.MOD_ID)
 public class SeltadeRoads {
 
     public SeltadeRoads() {
-
-        // This method is invoked by the Forge mod loader when it is ready
-        // to load your mod. You can access Forge and Common code in this
-        // project.
-
-        // Use Forge to bootstrap the Common mod.
         Constants.LOG.info("Hello Forge world!");
         CommonClass.init();
 
+        MinecraftForge.EVENT_BUS.addListener((PlayerInteractEvent.RightClickBlock event) -> {
+            if (event.getEntity() == null) {
+                return;
+            }
+
+            InteractionResult result = CommonClass.handleBlockUse(
+                    event.getEntity(),
+                    event.getLevel(),
+                    event.getHand(),
+                    event.getPos(),
+                    event.getFace()
+            );
+
+            if (result != InteractionResult.PASS) {
+                event.setCanceled(true);
+                event.setCancellationResult(result);
+            }
+        });
     }
 }
