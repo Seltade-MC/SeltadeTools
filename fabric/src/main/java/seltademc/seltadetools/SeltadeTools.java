@@ -8,7 +8,6 @@ public class SeltadeTools implements ModInitializer {
     
     @Override
     public void onInitialize() {
-        Constants.LOG.info("Hello Fabric world!");
         CommonClass.init();
 
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {

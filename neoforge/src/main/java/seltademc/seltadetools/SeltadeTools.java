@@ -10,7 +10,6 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 public class SeltadeTools {
 
     public SeltadeTools(IEventBus eventBus) {
-        Constants.LOG.info("Hello NeoForge world!");
         CommonClass.init();
 
         NeoForge.EVENT_BUS.addListener((PlayerInteractEvent.RightClickBlock event) -> {

@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.Mod;
 public class SeltadeTools {
 
     public SeltadeTools() {
-        Constants.LOG.info("Hello Forge world!");
         CommonClass.init();
 
         MinecraftForge.EVENT_BUS.addListener((PlayerInteractEvent.RightClickBlock event) -> {

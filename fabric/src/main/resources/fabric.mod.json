@@ -8,8 +8,8 @@
         "${mod_author}"
     ],
     "contact": {
-        "issues": "https://github.com/Seltade-MC/seltade-roads/issues",
-        "sources": "https://github.com/Seltade-MC/seltade-roads"
+        "issues": "https://github.com/Seltade-MC/SeltadeTools/issues",
+        "sources": "https://github.com/Seltade-MC/SeltadeTools"
     },
     "license": "${license}",
     "icon": "${mod_id}.png",

@@ -18,12 +18,6 @@ loom {
         accessWidenerPath.set(aw)
     }
     runs {
-        client {
-            client()
-            setConfigName('Fabric Client')
-            ideConfigGenerated(true)
-            runDir('runs/client')
-        }
         server {
             server()
             setConfigName('Fabric Server')

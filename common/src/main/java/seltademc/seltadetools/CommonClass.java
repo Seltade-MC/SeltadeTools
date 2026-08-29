@@ -21,16 +21,13 @@ import seltademc.seltadetools.platform.Services;
 public class CommonClass {
 
     public static void init() {
-
-        Constants.LOG.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.getEnvironmentName());
-
         if (Services.PLATFORM.isModLoaded(Constants.MOD_ID)) {
-            Constants.LOG.info("Hello to {}", Constants.MOD_ID);
+            Constants.LOG.info("Loaded {}", Constants.MOD_NAME);
         }
     }
 
     public static InteractionResult handleBlockUse(Player player, Level world, InteractionHand hand, BlockPos pos, Direction direction) {
-        if (world.isClientSide() || direction == Direction.DOWN) {
+        if (direction == Direction.DOWN) {
             return InteractionResult.PASS;
         }
 
