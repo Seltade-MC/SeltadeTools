@@ -23,9 +23,8 @@ public class CommonClass {
         // your own abstraction layer. You can learn more about this in our provided services class. In this example
         // we have an interface in the common code and use a loader specific implementation to delegate our call to
         // the platform specific approach.
-        if (Services.PLATFORM.isModLoaded("seltaderoads")) {
-
-            Constants.LOG.info("Hello to seltaderoads");
+        if (Services.PLATFORM.isModLoaded(Constants.MOD_ID)) {
+            Constants.LOG.info("Hello to {}", Constants.MOD_ID);
         }
     }
 }
