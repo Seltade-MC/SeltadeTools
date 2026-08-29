@@ -8,15 +8,15 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "issues": "https://github.com/Seltade-MC/seltade-roads/issues",
+        "sources": "https://github.com/Seltade-MC/seltade-roads"
     },
     "license": "${license}",
     "icon": "${mod_id}.png",
-    "environment": "*",
+    "environment": "server",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "seltademc.seltaderoads.SeltadeRoads"
         ]
     },
     "mixins": [
@@ -28,9 +28,6 @@
         "fabric-api": "*",
         "minecraft": "${minecraft_version}",
         "java": ">=${java_version}"
-    },
-    "suggests": {
-        "another-mod": "*"
     }
 }
   
