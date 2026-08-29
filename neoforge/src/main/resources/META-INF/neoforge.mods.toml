@@ -10,7 +10,11 @@ displayURL="https://github.com/Seltade-MC/SeltadeTools"              #optional (
 logoFile = "${mod_id}.png"                                           #optional
 credits = "${credits}"                                               #optional
 authors = "${mod_author}"                                            #optional
-description = '''${description}'''                                   #mandatory (Supports multiline text)
+description = '''${description}'''
+[[mixins]]
+config = "${mod_id}.mixins.json"
+[[mixins]]
+config = "${mod_id}.neoforge.mixins.json"                                  #mandatory (Supports multiline text)
 [[dependencies.${mod_id}]]                                           #optional
 modId = "neoforge"                                                   #mandatory
 type="required"                                                      #mandatory (Can be one of "required", "optional", "incompatible" or "discouraged")
