@@ -43,11 +43,11 @@ public abstract class HoeItemMixin {
         );
         TILLABLES.put(
             Blocks.COARSE_DIRT,
-            Pair.of(HoeItem::onlyIfAirAbove, HoeItem.changeIntoState(Blocks.FARMLAND.defaultBlockState()))
+            Pair.of(HoeItem::onlyIfAirAbove, HoeItem.changeIntoState(Blocks.DIRT.defaultBlockState()))
         );
         TILLABLES.put(
             Blocks.ROOTED_DIRT,
-            Pair.of(ctx -> true, HoeItem.changeIntoStateAndDropItem(Blocks.FARMLAND.defaultBlockState(), net.minecraft.world.item.Items.HANGING_ROOTS))
+            Pair.of(ctx -> true, HoeItem.changeIntoStateAndDropItem(Blocks.DIRT.defaultBlockState(), net.minecraft.world.item.Items.HANGING_ROOTS))
         );
     }
 }
