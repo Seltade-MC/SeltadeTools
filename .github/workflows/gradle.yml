@@ -38,7 +38,7 @@ jobs:
     - name: Upload fabric build
       uses: actions/upload-artifact@v4
       with:
-        name: Package
+        name: fabric-1.21.1
         path: fabric/build/libs
 
 
@@ -67,7 +67,7 @@ jobs:
     - name: Upload Forge build
       uses: actions/upload-artifact@v4
       with:
-        name: Package
+        name: forge-1.21.1
         path: forge/build/libs
 
 
@@ -95,5 +95,5 @@ jobs:
     - name: Upload NeoForge build
       uses: actions/upload-artifact@v4
       with:
-        name: Package
+        name: neoforge-1.21.1
         path: neoforge/build/libs
