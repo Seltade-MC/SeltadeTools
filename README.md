@@ -41,3 +41,7 @@
 |![coarse_dirt](resources/coarse_dirt.png) ->|![dirt_path](resources/dirt_path.png)|![dirt](resources/dirt.png)|
 |![rooted_dirt](resources/rooted_dirt.png) ->|![dirt_path](resources/dirt_path.png)|![dirt](resources/dirt.png)|
 ![farmland](resources/farmland.png) ->|❌|❌|
+
+## If you encounter a bug or have an idea for a tool-related feature, or if you need support, please come to our GitHub page and submit an issue (links below).
+
+[Modrinth](https://modrinth.com/mod/seltadetools), [Github](https://github.com/Seltade-MC/SeltadeTools), [Github Issues](https://github.com/Seltade-MC/SeltadeTools/issues)
