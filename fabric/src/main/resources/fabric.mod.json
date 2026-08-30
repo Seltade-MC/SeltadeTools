@@ -12,7 +12,7 @@
         "sources": "https://github.com/Seltade-MC/SeltadeTools"
     },
     "license": "${license}",
-    "icon": "${mod_id}.png",
+    "icon": "${mod_name}.png",
     "environment": "*",
     "entrypoints": {
         "main": [
