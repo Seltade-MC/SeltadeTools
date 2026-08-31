@@ -5,7 +5,7 @@ plugins {
 }
 
 base {
-    archivesName = "${mod_name}-forge-${minecraft_version_min}-${minecraft_version_max}"
+    archivesName = "${mod_name}-forge-${minecraft_version}-${minecraft_version_max}"
 }
 
 mixin {
@@ -19,7 +19,7 @@ jar {
 }
 
 minecraft {
-    mappings channel: 'official', version: minecraft_version_min
+    mappings channel: 'official', version: minecraft_version
 
     copyIdeResources = true //Calls processResources when in dev
 
@@ -51,7 +51,7 @@ minecraft {
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version_min}-${forge_version}"
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 

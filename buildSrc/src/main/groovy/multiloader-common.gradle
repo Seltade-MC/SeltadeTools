@@ -4,7 +4,7 @@ plugins {
 }
 
 base {
-    archivesName = "${mod_id}-${project.name}-${minecraft_version_min}-${minecraft_version_max}"
+    archivesName = "${mod_id}-${project.name}-${minecraft_version}-${minecraft_version_max}"
 }
 
 java {
@@ -50,7 +50,7 @@ repositories {
 ['apiElements', 'runtimeElements', 'sourcesElements', 'javadocElements'].each { variant ->
     configurations."$variant".outgoing {
         capability("$group:${base.archivesName.get()}:$version")
-        capability("$group:$mod_id-${project.name}-${minecraft_version_min}-${minecraft_version_max}:$version")
+        capability("$group:$mod_id-${project.name}-${minecraft_version}-${minecraft_version_max}:$version")
         capability("$group:$mod_id:$version")
     }
     publishing.publications.configureEach {
@@ -77,7 +77,7 @@ jar {
                 'Implementation-Title'  : project.name,
                 'Implementation-Version': project.jar.archiveVersion,
                 'Implementation-Vendor' : mod_author,
-                'Built-On-Minecraft'    : minecraft_version_min
+                'Built-On-Minecraft'    : minecraft_version
         ])
     }
 }
@@ -86,6 +86,7 @@ processResources {
     var expandProps = [
             'version'                      : version,
             'group'                        : project.group, //Else we target the task's group.
+            'minecraft_version'            : minecraft_version,
             'minecraft_version_min'        : minecraft_version_min,
             'minecraft_version_max'        : minecraft_version_max,
             'minecraft_version_range'      : minecraft_version_range,
