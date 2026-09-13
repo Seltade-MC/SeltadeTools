@@ -19,9 +19,6 @@
             "seltademc.seltadetools.SeltadeTools"
         ]
     },
-    "mixins": [
-        "${mod_id}.fabric.mixins.json"
-    ],
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",
